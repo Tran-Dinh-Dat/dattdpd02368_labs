@@ -32,9 +32,21 @@ Route::get('/user/{name?}', function($name='Dat') {
 });
 Route::get('/homeController', 'homeController@index');
 
-// Lab2
+// Lab3
 Route::get('index', function () {
     $xe = ['Exciter 150 phiên bản Monster Energy Yamaha MotoGP', 'Exciter 150 phiên bản Giới hạn', 'Exciter 150 RC phiên bản mới','Sirius phanh cơ'];
     return view('index', ['name'=> 'Tran Dinh Dat', 'day'=>'Thứ 4', 'xe'=>$xe]);
+});
+
+// Bài làm thêm lab 3
+Route::get('news', function(){
+    $news_list = array(
+        ['title'=> 'Bài viết số 1', 'content'=>'Nội dung bài viết 1', 'date_post'=>'23/5/2019'],
+        ['title'=> 'Bài viết số 2', 'content'=>'Nội dung bài viết 2', 'date_post'=>'22/5/2019'],
+        ['title'=> 'Bài viết số 3', 'content'=>'Nội dung bài viết 3', 'date_post'=>'21/5/2019'],
+        ['title'=> 'Bài viết số 4', 'content'=>'Nội dung bài viết 4', 'date_post'=>'20/5/2019'],
+        ['title'=> 'Bài viết số 5', 'content'=>'Nội dung bài viết 4', 'date_post'=>'20/5/2019'],
+    );
+    return view('news.index', compact('news_list'));
 });
 
