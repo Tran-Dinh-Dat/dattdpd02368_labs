@@ -41,12 +41,13 @@ Route::get('index', function () {
 // Bài làm thêm lab 3
 Route::get('news', function(){
     $news_list = array(
-        ['title'=> 'Bài viết số 1', 'content'=>'Nội dung bài viết 1', 'date_post'=>'23/5/2019'],
-        ['title'=> 'Bài viết số 2', 'content'=>'Nội dung bài viết 2', 'date_post'=>'22/5/2019'],
-        ['title'=> 'Bài viết số 3', 'content'=>'Nội dung bài viết 3', 'date_post'=>'21/5/2019'],
-        ['title'=> 'Bài viết số 4', 'content'=>'Nội dung bài viết 4', 'date_post'=>'20/5/2019'],
-        ['title'=> 'Bài viết số 5', 'content'=>'Nội dung bài viết 4', 'date_post'=>'20/5/2019'],
+        ['title'=> 'Bài viết số 1', 'content'=>'Nội dung bài viết 1', 'post_date'=>'23/5/2019'],
+        ['title'=> 'Bài viết số 2', 'content'=>'Nội dung bài viết 2', 'post_date'=>'22/5/2019'],
+        ['title'=> 'Bài viết số 3', 'content'=>'Nội dung bài viết 3', 'post_date'=>'21/5/2019'],
+        ['title'=> 'Bài viết số 4', 'content'=>'Nội dung bài viết 4', 'post_date'=>'20/5/2019'],
+        ['title'=> 'Bài viết số 5', 'content'=>'Nội dung bài viết 4', 'post_date'=>'20/5/2019'],
     );
     return view('news.index', compact('news_list'));
 });
+
 

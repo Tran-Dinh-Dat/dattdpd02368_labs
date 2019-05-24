@@ -19,8 +19,9 @@
     @foreach ($news_list as $news)
         <div class="col-md-3">
             @if ($loop->first)
-                {{-- @include('news_time','title'=>$news['title'],'content'=>$news['content'],'date_post'=>$news['date_post'],'class'=>'success') --}}
-                <div class="panel panel-success">
+            @include('../news.news_item', ['title' => $news['title'], 'content' => $news['content'], 'post_date' => $news['post_date'], 'class' => 'success']);
+           
+                {{-- <div class="panel panel-success">
                     <div class="panel-heading">
                         <h3 class="panel-title">{{ $news['title'] }}</h3>
                     </div>
@@ -30,12 +31,12 @@
                     <div class="panel-footer">
                         {{$news['date_post']}}
                     </div>
-                </div>
+                </div> --}}
                 
                 
             @else 
-                {{-- @include('news_time','title'=>$news['title'],'content'=>$news['content'],'date_post'=>$news['date_post'],'class'=>'dangger']) --}}
-                <div class="panel panel-danger">
+            @include('../news.news_item', ['title' => $news['title'], 'content' => $news['content'], 'post_date' => $news['post_date'], 'class' => 'info']);
+                {{-- <div class="panel panel-danger">
                     <div class="panel-heading">
                         <h3 class="panel-title">{{ $news['title'] }}</h3>
                     </div>
@@ -45,7 +46,7 @@
                     <div class="panel-footer">
                         {{$news['date_post']}}
                     </div>
-                </div>
+                </div> --}}
             @endif
             
         </div>

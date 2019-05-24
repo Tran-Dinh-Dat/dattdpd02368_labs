@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <div class="row">
-            @yield('nav')
+            @include('../layout/news_menu')
         </div>
     </div>
     <div class="container">

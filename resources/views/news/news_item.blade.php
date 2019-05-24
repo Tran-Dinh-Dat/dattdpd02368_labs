@@ -6,7 +6,7 @@
         {{ $content }}
     </div>
     <div class="panel-footer">
-        {{$date_post}}
+        {{$post_date}}
     </div>
 </div>
 
