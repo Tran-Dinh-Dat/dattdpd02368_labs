@@ -51,3 +51,9 @@ Route::get('news', function(){
 });
 
 
+// Bài 5 Validation 
+Route::get('validation', 'ValidationController@showform');
+Route::post('validation', 'ValidationController@validateform')->name('validateform');
+
+Route::get('register', 'HomeController@registerform');
+Route::post('register', 'HomeController@register');
