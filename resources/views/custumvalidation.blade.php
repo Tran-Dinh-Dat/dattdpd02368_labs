@@ -8,24 +8,21 @@
         <div class="col-md-8 col-md-offset-2">
 
      
-<form action="{{ action('ValidationController@validateform') }}" method="POST">
+<form action="{{ action('ValidationController@postCustomValidation') }}" method="POST">
     @csrf
 <table class="table table-hover">
     <thead>
         <tr>
-            <th>Login Form</th>
+            <th>Custom Validation Form</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>User Name</td>
-            <td><input class="form-control" type="text" name="username" value="{{ old('username') }}"></td>
+            <td>Phone Number</td>
+            <td><input class="form-control" type="text" name="phone" value="{{ old('phone') }}"></td>
 
         </tr>
-        <tr>
-            <td>Password</td>
-            <td><input class="form-control"  type="text" name="password"></td>
-        </tr>
+     
         <tr>
             <td><button class='btn btn-info' type="submit">Ok</button></td>
         </tr>

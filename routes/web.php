@@ -33,10 +33,10 @@ Route::get('/user/{name?}', function($name='Dat') {
 Route::get('/homeController', 'homeController@index');
 
 // Lab3
-Route::get('index', function () {
-    $xe = ['Exciter 150 phiên bản Monster Energy Yamaha MotoGP', 'Exciter 150 phiên bản Giới hạn', 'Exciter 150 RC phiên bản mới','Sirius phanh cơ'];
-    return view('index', ['name'=> 'Tran Dinh Dat', 'day'=>'Thứ 4', 'xe'=>$xe]);
-});
+// Route::get('index', function () {
+//     $xe = ['Exciter 150 phiên bản Monster Energy Yamaha MotoGP', 'Exciter 150 phiên bản Giới hạn', 'Exciter 150 RC phiên bản mới','Sirius phanh cơ'];
+//     return view('index', ['name'=> 'Tran Dinh Dat', 'day'=>'Thứ 4', 'xe'=>$xe]);
+// });
 
 // Bài làm thêm lab 3
 Route::get('news', function(){
@@ -57,3 +57,6 @@ Route::post('validation', 'ValidationController@validateform')->name('validatefo
 
 Route::get('register', 'HomeController@registerform');
 Route::post('register', 'HomeController@register');
+
+Route::get('custom-validation', 'ValidationController@getCustomValidation');
+Route::post('custom-validation', 'ValidationController@postCustomValidation');

@@ -128,10 +128,14 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'phone' => [
+            'in_phone' => 'Pless enten Viet Nam phone number which star with +84',
+        ],
+        'age' => [
+            'in_age' => 'Tuổi phải lớn hơn năm năm hiện tại 10 năm',
         ],
     ],
+
 
     /*
     |--------------------------------------------------------------------------
@@ -145,5 +149,6 @@ return [
     */
 
     'attributes' => [],
+
 
 ];

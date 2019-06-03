@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
+use Validator;
 
 
 
@@ -28,5 +29,11 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+        Validator::extend('in_phone', function($attribute, $value, $parameters) {
+            return substr($value, 0, 3) == '+84';
+        });
+        Validator::extend('in_age', function($attribute, $value, $parameters) {
+            return $value < date("Y");
+        });
     }
 }

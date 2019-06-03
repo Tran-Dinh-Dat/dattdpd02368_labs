@@ -20,4 +20,13 @@ class ValidationController extends Controller
             return View('login')->withErrors($validateData);
         }
     }
+    public function getCustomValidation() {
+        return view('custumvalidation');
+    }
+    public function postCustomValidation(Request $request) {
+        $this->validate($request, [
+            'phone' => 'required|in_phone',
+        ]);
+        return 'Successfully';
+    }
 }

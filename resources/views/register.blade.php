@@ -32,28 +32,29 @@
         </tr>
         <tr>
             <td>User Name</td>
-            <td><input class="form-control" type="text" name="username"></td>
+            <td><input class="form-control" type="text" name="username" value="{{ old('username') }}"></td>
         </tr>
         <tr>
             <td>Email</td>
-            <td><input class="form-control" type="text" name="email"></td>
+            <td><input class="form-control" type="text" name="email" value="{{ old('email') }}"></td>
         </tr>
         <tr>
             <td>Password</td>
-            <td><input class="form-control"  type="text" name="password"></td>
+            <td><input class="form-control"  type="password" name="password" value="{{ old('password') }}"></td>
         </tr>
         <tr>
             <td>Phone Number</td>
-            <td><input class="form-control"  type="text" name="phone"></td>
+            <td><input class="form-control"  type="text" name="phone" value="{{ old('phone') }}"></td>
         </tr>
         <tr>
             <td>Date of Birth</td>
-            <td><input class="form-control"  type="date" name="date"></td>
+            <td><input class="form-control"  type="date" name="age" value="{{ old('age') }}"></td>
         </tr>
         <tr>
             <td>Gender</td>
             <td>
-                <select class="form-control" name="gender">
+                <select class="form-control" name="gender" value="{{ old('gender') }}">
+                    <option>---</option>
                     <option>Nam</option>
                     <option>Nữ</option>
                 </select>
@@ -61,7 +62,7 @@
         </tr>
         <tr>
             <td>Address</td>
-            <td><input class="form-control"  type="text" name="address"></td>
+            <td><input class="form-control"  type="text" name="address" value="{{ old('address') }}"></td>
         </tr>
 
 

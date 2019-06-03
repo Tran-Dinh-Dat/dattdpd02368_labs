@@ -18,15 +18,22 @@ class HomeController extends Controller
 
     public function register(Request $request)
     {
+       
         $validateData = $request->validate([
             'username' => 'required',
             'email' => 'required',
             'password' => 'required',
-            'phone' => 'required',
-            'date' => 'required',
+            'phone' => 'required|in_phone',
+            'age' => 'required|in_age',
             'gender' => 'required',
             'address' => 'required'
         ]);
+        // if ($validateData->fails()) {
+        //     return redirect('register')->withInput();
+        // }else {
+        //     dd($request);
+        // }
         dd($request);
+        
     }
 }
