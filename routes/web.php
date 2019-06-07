@@ -60,3 +60,36 @@ Route::post('register', 'HomeController@register');
 
 Route::get('custom-validation', 'ValidationController@getCustomValidation');
 Route::post('custom-validation', 'ValidationController@postCustomValidation');
+
+//lab6
+Route::get('/insert', function() {
+    App\Category::create(array('name'=> 'music'));
+    return 'Category added';
+});
+
+Route::get('/read', function () {
+    $category = new App\Category();
+    $data = $category->all(array('name', 'id'));
+    foreach($data as $list) {   
+        echo $list->id . ' ' . $list->name . '<br>';
+    }
+});
+
+Route::get('update/{id}', function ($id) {
+    
+    $category = App\Category::find($id);
+    $category->name = 'ten da duoc cap nhat';
+    $category->save();
+    $data = $category->all(array('name', 'id'));
+    foreach ($data as $list) {
+        echo $list->id . ' ' . $list->name . '<br>';
+    }
+});
+Route::get('delete/{id}', function ($id) {
+    $category = App\Category::find($id);
+    $category->delete();
+    $data = $category->all(array('name', 'id'));
+    foreach ($data as $list) {
+        echo $list->id . ' ' . $list->name . '<br>';
+    }
+});

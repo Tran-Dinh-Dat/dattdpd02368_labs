@@ -54,7 +54,6 @@
             <td>Gender</td>
             <td>
                 <select class="form-control" name="gender" value="{{ old('gender') }}">
-                    <option>---</option>
                     <option>Nam</option>
                     <option>Nữ</option>
                 </select>
